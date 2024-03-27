@@ -1,5 +1,5 @@
 import BalanceComponent from '../Components/BalanceComponent';
-
+import IncomeExpenseComponent from './IncomeExpenseComponent';
 export default function AppUI(){
 
 
@@ -8,6 +8,8 @@ export default function AppUI(){
             <BalanceComponent
                 balance={15.5}
             />
+
+            <IncomeExpenseComponent/>
         </main>
     );
 }

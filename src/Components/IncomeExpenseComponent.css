@@ -1,0 +1,49 @@
+.inc-exp-container{
+    width:350px;
+    height:93px;
+    padding:17px;
+    margin-top:75px;
+    display:flex;
+    flex-direction:row;
+    gap:8px;
+    background-color:#fff;
+    justify-content: center;
+
+    font-size:1.8rem;
+    box-shadow: 2px 3px 3px rgba(35, 35, 35,0.16);
+
+}
+
+
+.inc-exp-container .income-container{
+    text-align:center;
+    justify-content: center;
+    border-right:1px solid #dedede;
+    padding-right:45px;
+}
+
+.inc-exp-container .income-container p{
+    font-weight: 500;
+}
+
+.inc-exp-container .income-container span{
+    color:#2ecc71;
+    font-weight:400;
+}
+
+
+.inc-exp-container .expense-container{
+    text-align:center;
+    justify-content: center;
+    border-right:1px solid #dedede;
+    padding-left:35px;
+}
+
+.inc-exp-container .expense-container p{
+    font-weight: 500;
+}
+
+.inc-exp-container .expense-container span{
+    color:#c4392b;
+    font-weight:400;
+}
