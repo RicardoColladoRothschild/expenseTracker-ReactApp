@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import BalanceComponent from '../Components/BalanceComponent';
 import { AddNewComponent } from './AddNewComponent';
 import { ExpenseType } from './ExpenseType';
@@ -10,21 +10,7 @@ export default function AppUI(){
 
     const [expenseList, setExpenseList] = useState<Array<ExpenseType>>([]);
 
-    
 
-    useEffect(()=>{
-        setExpenseList([
-            {
-                expense:"comer",
-                amount:300
-            },
-            {
-                expense:"jugar",
-                amount:100
-            
-            }
-        ]);
-    },[]);
     
     return(
         <main>
