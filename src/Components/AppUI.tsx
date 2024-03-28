@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import BalanceComponent from '../Components/BalanceComponent';
+import { AddNewComponent } from './AddNewComponent';
 import { ExpenseType } from './ExpenseType';
 import { HistoryComponent } from './HistoryComponent';
 import IncomeExpenseComponent from './IncomeExpenseComponent';
-
 
 
 export default function AppUI(){
@@ -35,6 +35,10 @@ export default function AppUI(){
             
                 <HistoryComponent
                     expenseList={expenseList}
+                />
+                <AddNewComponent
+                setExpenseList={setExpenseList}
+                expenseList = {expenseList}
                 />
             
             

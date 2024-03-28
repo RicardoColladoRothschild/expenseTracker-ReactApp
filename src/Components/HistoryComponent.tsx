@@ -15,11 +15,14 @@ export function HistoryComponent({expenseList}: Props){
         <ul className="expense-list-container">            
         {expenseList && 
                 expenseList.map((expense)=>(
-                    <li className="expense-detail-container" key={expense.expense}>  
+                <div key={expense.expense}className="item-detail-list-container">
+                    <span>x</span>
+                <li className="expense-detail-container" key={expense.expense}>
+                <p >{expense.expense}</p>
+                <span>{expense.amount}</span>
+                </li>
+                </div>
                     
-                    <p >{expense.expense}</p>
-                    <span>{expense.amount}</span>
-                    </li>
                 ))
             }</ul>
            

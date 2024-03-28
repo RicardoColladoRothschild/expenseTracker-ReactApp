@@ -27,16 +27,18 @@ body {
   background-color: #f7f7f7;
   display: grid;
   place-items: center;
-  align-items: center;
+  
   min-width: 320px;
-  min-height: 100vh;
+  min-height: 78vh;
 }
 
 main{
   width:345px;
-  height:515px;
+  height:565px;
   display:flex;
   flex-direction:column;
+  
+  
 }
 
 h1 {
