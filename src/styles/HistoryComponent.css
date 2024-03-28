@@ -1,3 +1,7 @@
+:root{
+    --light-grey:#c2c2c2;
+}
+
 .expense-history-container{
     width:350px;
     height:auto;
@@ -10,7 +14,7 @@
 .expense-history-container h3{
     font-size:1.9rem;
     font-weight: 600;
-    border-bottom:1px solid grey;
+    border-bottom:1px solid var(--light-grey);
     padding:6px;
     margin-bottom:10px;
 
@@ -30,7 +34,7 @@
     padding:8px;
     margin-bottom:8px;
     box-shadow: 2px 2px 6px rgba(35,35,35,0.16);
-    border-bottom: 2px solid #c2c2c2;
+    border-bottom: 2px solid var(--light-grey);
     font-size:1.6rem;
     line-height: 1.8rem;;
     
