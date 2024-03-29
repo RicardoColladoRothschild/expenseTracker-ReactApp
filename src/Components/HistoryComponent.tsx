@@ -1,22 +1,28 @@
 import '../styles/HistoryComponent.css';
 import { ExpenseType } from "./ExpenseType";
 interface Props{
-    expenseList:ExpenseType[]
+    expenseList:ExpenseType[];
+    setExpenseList:(expense:ExpenseType[])=>void;
+
 }
-export function HistoryComponent({expenseList}: Props){
+export function HistoryComponent({expenseList, setExpenseList}: Props){
 
 
-    
+    function deleteExpense(expenseToDelete:string){
+            
+            const estadoDerivado = expenseList.filter((expense)=>{expense.expense!==expenseToDelete});
+            setExpenseList(estadoDerivado);
+    }
     return(
 
         <>
         <div className="expense-history-container">
         <h3>History</h3>
-        <ul className="expense-list-container">            
+        <ul className="expense-list-container">
         {expenseList && 
                 expenseList.map((expense)=>(
                 <div key={expense.expense} className="item-detail-list-container">
-                    <span>x</span>
+                    <span onClick={()=>deleteExpense(expense.expense)}>x</span>
                 <li className="expense-detail-container" key={expense.expense}>
                 <p >{expense.expense}</p>
                 <span>

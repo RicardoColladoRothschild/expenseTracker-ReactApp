@@ -38,6 +38,7 @@ export default function AppUI(){
             
                 <HistoryComponent
                     expenseList={expenseList}
+                    setExpenseList={setExpenseList}
                 />
                 <AddNewComponent
                 setExpenseList={setExpenseList}
