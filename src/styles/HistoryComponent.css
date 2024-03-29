@@ -64,3 +64,18 @@
     
 }
 
+.item-detail-list-container .color-identifier-container {
+    width:6px;
+    height:40px;
+    position:relative;
+    left:-9px;
+    font-size:1.8rem;
+ }
+
+ .item-detail-list-container .income-green{
+    background-color:#2ecc71;
+} 
+
+.item-detail-list-container .expense-red{
+    background-color:#c0392b;
+}
