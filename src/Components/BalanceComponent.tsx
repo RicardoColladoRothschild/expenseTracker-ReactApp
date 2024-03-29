@@ -1,6 +1,6 @@
 
 interface Props{
-    balance:number;
+    balance:number | undefined;
 }
 export default function BalanceComponent({balance}:Props){
 
