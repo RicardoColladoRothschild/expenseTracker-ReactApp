@@ -9,9 +9,10 @@ export function HistoryComponent({expenseList, setExpenseList}: Props){
 
 
     function deleteExpense(expenseToDelete:string){
-            
-            const estadoDerivado = expenseList.filter((expense)=>{expense.expense!==expenseToDelete});
+           
+            const estadoDerivado = expenseList.filter((expense)=>{return expense.expense!==expenseToDelete});
             setExpenseList(estadoDerivado);
+          
     }
     return(
 
