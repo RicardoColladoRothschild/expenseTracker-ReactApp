@@ -41,9 +41,11 @@
     padding-bottom:15px;
     text-align: center;
     justify-content: center;
+    
 }
 .item-detail-list-container > span:hover{
     cursor:pointer;
+    display:block;
 }
 .expense-detail-container{
     
