@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import BalanceComponent from '../Components/BalanceComponent';
+import { useLocalStorage } from '../CustomHook/useLocalStorage';
 import { AddNewComponent } from './AddNewComponent';
-import { ExpenseType } from './ExpenseType';
 import { HistoryComponent } from './HistoryComponent';
 import IncomeExpenseComponent from './IncomeExpenseComponent';
 
-
 export default function AppUI(){
 
-    const [expenseList, setExpenseList] = useState<Array<ExpenseType>>([]);
+    const {item:expenseList, saveItem:setExpenseList} = useLocalStorage('ExpenseListStorage',[]);
+    //const [expenseList, setExpenseList] = useState<Array<ExpenseType>>([]);
 
     const [income, setIncome] = useState<number | undefined>(0);
     const [expense, setExpense] = useState<number | undefined>(0);
