@@ -2,7 +2,7 @@ import '../styles/HistoryComponent.css';
 import { ExpenseType } from "./ExpenseType";
 interface Props{
     expenseList:ExpenseType[];
-    setExpenseList:(expense:ExpenseType[])=>void;
+    setExpenseList:(expense:ExpenseType[] | undefined)=>void;
 
 }
 export function HistoryComponent({expenseList, setExpenseList}: Props){
@@ -10,10 +10,16 @@ export function HistoryComponent({expenseList, setExpenseList}: Props){
 
     function deleteExpense(expenseToDelete:string){
            
-            const estadoDerivado = expenseList.filter((expense)=>{return expense.expense!==expenseToDelete});
+                
+            const estadoDerivado = expenseList.filter((expense)=>{
+                       return expense.expense!==expenseToDelete;
+            
+            });
+            
             setExpenseList(estadoDerivado);
           
     }
+    
     return(
 
         <>

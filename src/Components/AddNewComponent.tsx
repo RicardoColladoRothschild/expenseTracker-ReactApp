@@ -31,8 +31,8 @@ export const AddNewComponent:React.FC<Props> = ({setExpenseList, expenseList}:Pr
     }
 
     function addnewExpenseHandler(){
-        const tempArray = [...expenseList, textandAmount];
-        setExpenseList(tempArray);
+            const tempArray = [...expenseList, textandAmount];
+                setExpenseList(tempArray);
     }
     return(
         <div className="addnew-container">
