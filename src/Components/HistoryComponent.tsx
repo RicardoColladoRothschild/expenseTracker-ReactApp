@@ -2,7 +2,7 @@ import '../styles/HistoryComponent.css';
 import { ExpenseType } from "./ExpenseType";
 interface Props{
     expenseList:ExpenseType[];
-    setExpenseList:(expense:ExpenseType[] | undefined)=>void;
+    setExpenseList:(expense:ExpenseType[])=>void;
 
 }
 export function HistoryComponent({expenseList, setExpenseList}: Props){
@@ -15,7 +15,6 @@ export function HistoryComponent({expenseList, setExpenseList}: Props){
                        return index!==position;
             
             });
-            
             setExpenseList(estadoDerivado);
           
     }

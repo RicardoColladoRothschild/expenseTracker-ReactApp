@@ -8,7 +8,7 @@ import IncomeExpenseComponent from './IncomeExpenseComponent';
 
 export default function AppUI(){
 
-    const [expenseList, setExpenseList] = useState<Array<ExpenseType> | undefined>([]);
+    const [expenseList, setExpenseList] = useState<Array<ExpenseType>>([]);
 
     const [income, setIncome] = useState<number | undefined>(0);
     const [expense, setExpense] = useState<number | undefined>(0);
