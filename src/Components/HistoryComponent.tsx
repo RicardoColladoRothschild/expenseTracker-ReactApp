@@ -21,8 +21,8 @@ export function HistoryComponent({expenseList, setExpenseList}: Props){
         <h3>History</h3>
         <ul className="expense-list-container">
         {expenseList && 
-                expenseList.map((expense)=>(
-                <div key={expense.expense} className="item-detail-list-container">
+                expenseList.map((expense, index)=>(
+                <div key={`${expense.expense}+${index}`} className="item-detail-list-container">
                     <span onClick={()=>deleteExpense(expense.expense)}>x</span>
                 <li className="expense-detail-container" key={expense.expense}>
                 <p >{expense.expense}</p>
