@@ -8,11 +8,11 @@ interface Props{
 export function HistoryComponent({expenseList, setExpenseList}: Props){
 
 
-    function deleteExpense(expenseToDelete:string){
+    function deleteExpense(position:number){
            
                 
-            const estadoDerivado = expenseList.filter((expense)=>{
-                       return expense.expense!==expenseToDelete;
+            const estadoDerivado = expenseList.filter((expense, index)=>{
+                       return index!==position;
             
             });
             
@@ -29,7 +29,7 @@ export function HistoryComponent({expenseList, setExpenseList}: Props){
         {expenseList && 
                 expenseList.map((expense, index)=>(
                 <div key={`${expense.expense}+${index}`} className="item-detail-list-container">
-                    <span onClick={()=>deleteExpense(expense.expense)}>x</span>
+                    <span onClick={()=>deleteExpense(index)}>x</span>
                 <li className="expense-detail-container" key={expense.expense}>
                 <p >{expense.expense}</p>
                 <span>
